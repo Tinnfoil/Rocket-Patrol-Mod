@@ -10,4 +10,7 @@ let config = {
 }
 
 let game = new Phaser.Game(config);
-console.log("Rocket Patrol");
+
+// Set UI sizes
+let borderUISize = game.config.height / 15;
+let borderPadding = borderUISize / 3;
