@@ -32,6 +32,11 @@ class Play extends Phaser.Scene{
     }
 
     create() {
+
+        // Play bgm
+        this.bgm = this.sound.add('bgm_Odyssey');
+        this.bgm.play();
+
         //place starfield
         this.gameStartTime = game.settings.gameTimer;
         this.start = this.getTime();
@@ -160,9 +165,11 @@ class Play extends Phaser.Scene{
         if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyR)) {
             game.settings.gameTimer = this.gameStartTime;
             this.scene.restart();
+            this.bgm.stop();
         }
         if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyLEFT)) {
             this.scene.start("menuScene");
+            this.bgm.stop();
         }
 
         this.starfield.tilePositionX -= starSpeed;
