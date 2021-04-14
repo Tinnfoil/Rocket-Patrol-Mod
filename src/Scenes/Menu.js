@@ -15,7 +15,7 @@ class Menu extends Phaser.Scene{
 
         let menuConfig = {
             fontFamily: 'Courier',
-            fontSize: '28px',
+            fontSize: '20px',
             backgroundColor: '#F3B141',
             color: '#843605',
             align: 'right',
@@ -27,9 +27,15 @@ class Menu extends Phaser.Scene{
         }
 
         // Show menu text
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, "ROCKET PATROL", menuConfig).setOrigin(0.5);
-        this.add.text(game.config.width/2, game.config.height/2, "Use ←→ arrows to move & (F) to fire", menuConfig).setOrigin(0.5);
-        
+
+        menuConfig.fontSize = '30px';
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize * 2 - borderPadding * 2, "ROCKET PATROL", menuConfig).setOrigin(0.5);
+
+        menuConfig.fontSize = '20px';
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, "Player 1: Use (A) and (D) to move & (W) to fire", menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2, "Player 2: Use ←→ arrows to move & (↑) to fire", menuConfig).setOrigin(0.5);
+       
+
         menuConfig.backgroundColor = '#00FF00';
         menuConfig.color = '#000';
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, "Press ← for Novice and → for Expert", menuConfig).setOrigin(0.5);
@@ -56,7 +62,7 @@ class Menu extends Phaser.Scene{
           // hard mode
           game.settings = {
             spaceshipSpeed: 4,
-            gameTimer: 5000    
+            gameTimer: 45000    
           }
           this.sound.play('sfx_select');
           this.scene.start('playScene');    
