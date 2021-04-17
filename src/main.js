@@ -1,5 +1,20 @@
-// Server Command:  py -3 -m http.server
-//const Phaser = require("../lib/phaser");
+/*  SUBMIT COMMENTS
+Kenny Doan
+Rocket Patrol +++
+4/17/21
+Time to Complete: ~7 Hours
+
+Point Breakdown
+(5) Background Music
+(5) Randomized Ship Direction
+(5) New Modified Background
+(5) Rocket Control After firing
+(10) Time remaining on top
+(10) New animated spaceships
+(20) New spaceship with requirements
+(20) Time mechanism that adds time on hits
+(30) Simultaneous two player mode
+*/
 
 //Game Configuration
 let config = {

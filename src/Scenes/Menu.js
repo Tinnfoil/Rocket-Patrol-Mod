@@ -30,7 +30,7 @@ class Menu extends Phaser.Scene{
         // Show menu text
 
         menuConfig.fontSize = '30px';
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize * 2 - borderPadding * 2, "ROCKET PATROL", menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize * 2 - borderPadding * 2, "ROCKET PATROL +++", menuConfig).setOrigin(0.5);
 
         menuConfig.fontSize = '20px';
         this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, "Player 1: Use (A) and (D) to move & (W) to fire", menuConfig).setOrigin(0.5);
@@ -63,7 +63,7 @@ class Menu extends Phaser.Scene{
           // hard mode
           game.settings = {
             spaceshipSpeed: 4,
-            gameTimer: 5000    
+            gameTimer: 45000    
           }
           this.sound.play('sfx_select');
           this.scene.start('playScene');    
